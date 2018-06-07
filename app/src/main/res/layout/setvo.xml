@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="130dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="Back"
+        app:layout_constraintBottom_toTopOf="@+id/blueTooth"
+        app:layout_constraintEnd_toStartOf="@+id/setting"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/setting"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginTop="20dp"
+        android:text="Setting"
+        app:layout_constraintBottom_toTopOf="@+id/blueToothOpen"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/back"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/blueTooth"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginStart="20dp"
+        android:text="蓝牙连接"
+        app:layout_constraintBottom_toTopOf="@+id/upper"
+        app:layout_constraintEnd_toStartOf="@+id/blueToothOpen"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back" />
+
+    <Button
+        android:id="@+id/blueToothOpen"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="120dp"
+        android:text="打开蓝牙"
+        app:layout_constraintBottom_toTopOf="@+id/lower"
+        app:layout_constraintEnd_toStartOf="@+id/blueToothClose"
+        app:layout_constraintStart_toEndOf="@+id/blueTooth"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/blueToothClose"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="14dp"
+        android:text="关闭蓝牙"
+        app:layout_constraintBottom_toTopOf="@+id/humidityChange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/blueToothOpen"
+        app:layout_constraintTop_toBottomOf="@+id/setting" />
+
+    <EditText
+        android:id="@+id/upper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="245dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="20dp"
+        android:text="湿度上限"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/lower"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/blueTooth" />
+
+    <EditText
+        android:id="@+id/lower"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="245dp"
+        android:layout_marginEnd="60dp"
+        android:text="湿度下限"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/humidityChange"
+        app:layout_constraintStart_toEndOf="@+id/upper"
+        app:layout_constraintTop_toBottomOf="@+id/blueToothOpen" />
+
+    <Button
+        android:id="@+id/humidityChange"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="241dp"
+        android:layout_marginEnd="14dp"
+        android:text="修改湿度上下限"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/lower"
+        app:layout_constraintTop_toBottomOf="@+id/blueToothClose" />
+</android.support.constraint.ConstraintLayout>
